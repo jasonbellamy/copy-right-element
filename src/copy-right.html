@@ -1,0 +1,25 @@
+<template id="copy-right">
+  <span id="text">© Copyright</span>
+  <span id="year"></span>
+  <content></content>
+</template>
+<script>
+
+(function() {
+  var localDocument = (document._currentScript || document.currentScript).ownerDocument;
+  var element       = Object.create(HTMLElement.prototype);
+
+  element.createdCallback = function() {
+    var template     = localDocument.querySelector('#copy-right').content;
+    var templateNode = document.importNode(template, true);
+
+    templateNode.querySelector('#year').textContent = new Date().getFullYear();
+
+    this.createShadowRoot().appendChild(templateNode);
+  };
+
+  document.registerElement('copy-right', {
+      prototype: element
+  });
+}());
+</script>

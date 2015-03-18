@@ -1,0 +1,20 @@
+{
+  "name": "copy-right-element",
+  "version": "1.0.0",
+  "description": "A copyright text web-component.",
+  "license": "MIT",
+  "main": "src/copy-right.html",
+  "keywords": [
+    "copyright",
+    "html",
+    "element",
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.5.1"
+  }
+}
